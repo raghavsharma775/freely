@@ -1,0 +1,40 @@
+commands:
+
+Anywhere it gives permission error. write sudo before commmand to run it as administrator.
+npx create-react-app freely
+cd freely
+npm start
+
+Technical Details:
+
+Frontend: React.js
+Backend: Express.js + Node.js + mongodb   ---Running Backend-- nodemon server.js
+Authentication + hosting: Firebase        ---Running Frontend-- npm start
+
+App Body:
+Sidebar + chat window
+
+For icons like chat,status icon-- we use material UI
+
+Express- Express.js is a way of building a backend server running  on port 9000
+
+MongoDB- it is nosql database. very easy to use.
+
+PostMan- to create requests API
+
+Pusher- This service we use to make mongodb realtime.
+
+For Ex: With other database, when u make changes it reflect in application real time.
+But with mongodb, you have to save changes to repflect in application.
+So, here is the solution , pusher can make changes reflect in application real time.
+
+
+
+
+
+
+
+
+
+
+
