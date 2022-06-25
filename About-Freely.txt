@@ -1,6 +1,8 @@
+Tool: VS Code
 commands:
 
 Anywhere it gives permission error. write sudo before commmand to run it as administrator.
+npm: node package manager
 npx create-react-app freely
 cd freely
 npm start
@@ -11,29 +13,81 @@ Frontend: React.js
 Backend: Express.js + Node.js + mongodb   ---Running Backend-- nodemon server.js
 Authentication + hosting: Firebase        ---Running Frontend-- npm start
 
-App Body:
-Sidebar + chat window
+App Body:  Sidebar + chat window
 
 For icons like chat,status icon-- we use material UI
 
 Express- Express.js is a way of building a backend server running  on port 9000
 
-MongoDB- it is nosql database. very easy to use.
+MongoDB- it is nosql database. very easy to use. We use to store messages.
+Cloud.mongodb.com
+https://cloud.mongodb.com/v2/6223a143cec9f33489b8401f#clusters
 
 PostMan- to create requests API
 
 Pusher- This service we use to make mongodb realtime.
 
 For Ex: With other database, when u make changes it reflect in application real time.
-But with mongodb, you have to save changes to repflect in application.
+But with mongodb, you have to save changes to reflect in application.
 So, here is the solution , pusher can make changes reflect in application real time.
 
+whenever  there is change in collection in backend, it trigger the pusher and pusher triggers the frontend.
+
+frontend           pusher                 backend
+
+
+How pusher works with realtime sync:
+
+pusher is connect to both frontend and backend and listens both.
+
+frontend sends msg to backend where it saves the msg.
+backend lets pusher know the I receive a msg.
+pusher lets frontend know that backend receive a msg.
+frontend reloads the data.
+
+Axios: With axios, we are creating instance with base url
+Everytime we receive get or post request.
+
+Project Development:
+
+Frontend:
+
+
+First clean up everything means clean app() from app.js and clean up app.css
+We will use material-ui for icons : nom install @material-ui/core
+App Body:  Sidebar + chat window
+Sidebar: "sidebar__header”+"sidebar__headerRight”+"sidebar__search" + "sidebar__chats"
+
+
+Backend:
 
 
 
+npm init - command to manage package details.
+This will create a package.json file.
+Package.json tells what the dependency	are.
 
+npm i : it will install everything that	 needs to install.
 
+npm i express mongoose
 
+Put node_modules in gitignore file so they don’t pushed	 to git.
+
+Frontend(react)->Backend(express.js running on port 9000)
+
+We will create an API.
+
+There are Different requests : 
+GET: when frontend requests to get something to server.
+POST: when frontend requests to push something to server.
+DELETE: when frontend requests to delete something to server.
+
+npm i -g nodemon
+nodemon server.js
+npm i pusher(backend)
+npm i cors
+npm i pusher-js(front end)
+npm i axios(front end)
 
 
 
